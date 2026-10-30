@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #111c32;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 75px 8%;
+            scroll-margin-top: 75px;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap-reverse;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero-text h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-text p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .foto {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 5px solid #000000;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+        }
+
+        .judul {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+            color: #38bdf8;
+        }
+
+        .tentang {
+            background: #162238;
+            border-radius: 14px;
+            padding: 30px;
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #164e63;
+            color: #bae6fd;
+            padding: 5px 12px;
+            margin: 5px 4px 0 0;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        #kontak {
+            background: #162238;
+            text-align: center;
+        }
+
+        #kontak p {
+            margin: 10px 0;
+            overflow-wrap: anywhere;
+        }
+
+        #kontak a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero {
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .foto {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>ANS Portofolio</h2>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#Kemampuan">Kemampuan</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<section class="hero" id="beranda">
+    <div class="hero-text">
+        <p>HALO, SELAMAT DATANG!</p>
+        <h1>Saya <span>Adrian Nanda Saputra</span></h1>
+        <h3>Mahasiswa UNESA | S1 Sistem Informasi</h3>
+        <p>
+            Saya tertarik pada teknologi, pemrograman,
+            desain web, dan pengembangan aplikasi.
+            Saya senang belajar hal baru dan mengembangkan
+            kemampuan melalui berbagai proyek.
+        </p>
+        <a href="#tentang" class="btn">Kenali Saya</a>
+    </div>
+
+    <img src="static/foto.jpg"
+    alt="Foto Adrian Nanda Saputra"
+    class="foto">
+
+</section>
+
+<section id="tentang">
+    <h2 class="judul">Tentang Saya</h2>
+    <div class="tentang">
+        <p>
+            Perkenalkan, saya Adrian Nanda Saputra, seorang mahasiswa
+            yang memiliki minat dalam bidang teknologi
+            informasi. Saya senang mempelajari pemrograman,
+            memecahkan masalah, bekerja sama dalam tim,
+            dan mencoba berbagai hal baru untuk meningkatkan
+            kemampuan diri.
+        </p>
+    </div>
+</section>
+
+<section id="Kemampuan">
+    <h2 class="judul">Kemampuan</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Desain 3D & Animasi</h3>
+            <p>
+                Merancang, memodelkan, dan menghidupkan objek atau karakter tiga dimensi.
+            </p>
+            <span class="tag">Blender 3D</span>
+            <span class="tag">Character Modeling</span>
+        </div>
+
+        <div class="card">
+            <h3>Produksi & Pengeditan Video</h3>
+            <p>
+                Menggabungkan visual, efek, 
+                audio, dan transisi untuk menghasilkan konten video yang sinematik dan menarik.
+            </p>
+            <span class="tag">After Effects</span>
+            <span class="tag">Capcut</span>
+        </div>
+
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <p>
+                Kemampuan bekerja sama, berkomunikasi,
+                dan mengatur waktu.
+            </p>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Komunikasi</span>
+        </div>
+    </div>
+</section>
+
+<section id="proyek">
+    <h2 class="judul">Proyek Saya</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Website Portofolio</h3>
+            <p>
+                Website pribadi untuk menampilkan profil,
+                kemampuan, proyek, dan informasi kontak.
+            </p>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Flask</span>
+        </div>
+
+        <div class="card">
+            <h3>Aplikasi Python</h3>
+            <p>
+                Proyek aplikasi sederhana untuk melatih
+                logika dan dasar pemrograman Python.
+            </p>
+            <span class="tag">Python</span>
+        </div>
+
+        <div class="card">
+            <h3>Portofolio Video Editing</h3>
+            <p>
+                Mengedit video kreatif, konten digital, atau efek visual dengan transisi yang menarik.
+            </p>
+            <span class="tag">Alight Motion</span>
+            <span class="tag">Wink</span>
+            <span class="tag">Picsart</span>
+        </div>
+    </div>
+</section>
+
+<section id="pengalaman">
+    <h2 class="judul">Pengalaman</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Kompetisi & Akademik</h3>
+            <p>
+                Pernah mengikuti ajang kompetisi bidang akademik, 
+                salah satunya berpartisipasi dalam 
+                KSR (Kompetisi Sains/Matematika) 2024.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Pengembangan Diri & Kursus</h3>
+            <p>
+                Mengembangkan keterampilan teknis secara otodidak 
+                melalui berbagai pelatihan mandiri di bidang teknologi, 
+                desain, dan media digital.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="kontak">
+    <h2 class="judul">Hubungi Saya</h2>
+    <p>Email:
+        <a href="mailto:adriannandasaputra@gmail.com">
+            adriannandasaputra@gmail.com
+        </a>
+    </p>
+    <p>Instagram:
+        <a href="https://instagram.com/adrian_ns_76"
+           target="_blank" rel="noopener noreferrer">
+            @adrian_ns_76
+        </a>
+    </p>
+    <p>GitHub:
+        <a href="https://github.com/adrianns76-svg"
+           target="_blank" rel="noopener noreferrer">
+            github.com/adrianns76-svg
+        </a>
+    </p>
+    <br>
+    <a href="mailto:adriannandasaputra@gmail.com" class="btn">
+        Kirim Email
+    </a>
+</section>
+
+<footer>
+    <p>
+        &copy; 2026 Adrian Nanda Saputra.
+        Dibuat dengan Python, Flask, HTML, dan CSS.
+    </p>
+</footer>
+
+</body>
+</html>
